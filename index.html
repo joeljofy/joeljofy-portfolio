@@ -283,12 +283,38 @@
 
     <div class="fade-up flex flex-wrap gap-3 mb-10" id="filterBar">
       <button class="filter-btn active" data-filter="all">ALL</button>
+      <button class="filter-btn" data-filter="arduino">TTGO</button>
       <button class="filter-btn" data-filter="arduino">ARDUINO</button>
       <button class="filter-btn" data-filter="spikebot">SPIKEBOT</button>
       <button class="filter-btn" data-filter="ev3">EV3 MINDSTORM</button>
     </div>
 
     <div id="projectGrid" class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
+
+      <!-- Project 6: TTGO Sumo-Bot -->
+      <div class="project-card card-hover rounded-lg border overflow-hidden flex flex-col" data-cat="arduino" style="background: var(--card); border-color: var(--border);">
+        <div class="h-60 overflow-hidden relative bg-zinc-900">
+          <img src="IMAGES/SUMO_BOT_1.jpeg" alt="TTGO Sumo Bot" class="w-full h-full object-contain">
+          <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md border border-zinc-800 font-mono text-[10px]" style="color: var(--cyan);">
+            TTGO Sumo Bot
+          </div>
+          <div class="absolute top-3 right-3 flex items-center gap-1.5 px-2 py-1 rounded-full bg-black/60 backdrop-blur-sm">
+            <span class="led"></span><span class="font-mono text-[10px]" style="color: var(--cyan);">STABLE PROTOTYPE</span>
+          </div>
+        </div>
+        <div class="p-6 flex flex-col flex-1">
+          <div class="flex flex-wrap gap-2 mb-3">
+            <span class="tag">TTGO</span><span class="tag">ULTRASONIC SENSORS</span><span class="tag">ACTUATORS</span><span class="tag">INFRARED SENSORS</span>
+          </div>
+          <h3 class="font-display font-semibold text-xl mb-2">TTGO Sumo Bot</h3>
+          <p class="text-sm mb-5 flex-1" style="color: var(--muted);">
+           This project implements an autonomous sumo robot powered by a TTGO module, designed to locate and push opponent platforms out of a circular ring using pure torque and low-friction chassis geometry. Featuring two high-torque drive motors, a front castor wheel, a front ultrasonic sensor for target tracking, and four IR sensors for boundary detection, the system demonstrates key competencies in real-time embedded control, multi-sensor integration, and high-traction mobile robotics.
+          </p>
+          <button onclick="openCaseStudy('sumo')" class="mt-auto font-mono text-xs px-4 py-2 rounded-md border self-start hover:border-cyan-400 transition" style="border-color: var(--border); color: var(--cyan);">
+            Learn More >>>
+          </button>
+        </div>
+      </div>
 
       <!-- Project 5: Arduino Camera Module -->
       <div class="project-card card-hover rounded-lg border overflow-hidden flex flex-col" data-cat="arduino" style="background: var(--card); border-color: var(--border);">
@@ -436,6 +462,7 @@
       <div class="fade-up rounded-lg border p-6" style="background: var(--panel); border-color: var(--border);">
         <h3 class="font-mono text-xs tracking-widest mb-5" style="color: var(--cyan);">HARDWARE</h3>
         <div class="flex flex-wrap gap-2">
+          <span class="skill-chip">TTGO</span>
           <span class="skill-chip">Arduino (Uno/Mega)</span>
           <span class="skill-chip">LEGO EV3 System</span>
           <span class="skill-chip">LEGO SPIKE Prime</span>
@@ -452,6 +479,8 @@
         <div class="flex flex-wrap gap-2">
           <span class="skill-chip">C++ / Embedded C</span>
           <span class="skill-chip">Arduino IDE</span>
+          <span class="skill-chip">Fusion 360</span>
+          <span class="skill-chip">SolidWorks</span>
           <span class="skill-chip">Block Programming</span>
           <span class="skill-chip">Wireless Serial Config</span>
           <span class="skill-chip">Data Synchronization</span>
@@ -526,6 +555,19 @@
 
   // Dynamic Case Studies & Slideshow Data
   const caseStudies = {
+    sumo: {
+      title: "TTGO Sumo Bot",
+      desc: "TTGO ESP32 sumo robot featuring high-torque control, multi-sensor tracking, and real-time desktop telemetry.",
+      images: [
+        { src: "IMAGES/SUMO_BOT_1.jpeg", label: "Prototype 1" },
+        { src: "IMAGES/SUMO_BOT_2.png", label: "Circuitry" }
+      ],
+      sections: [
+        { title: "Project Objective", items: ["Develop an autonomous mini-sumo robotic system leveraging pure drivetrain torque to forcefully eject opponent platforms from the Dohyo.", "Implement real-time multi-sensor feedback and stream motor telemetry over high-speed serial to a custom desktop UI."] },
+        { title: "Engineering Execution", items: ["Interfaced a TTGO ESP32 driver board to control dual high-torque DC motors paired with a low-friction front castor wheel.", "Integrated a front ultrasonic sensor for target tracking and 4 downward IR sensors for perimeter edge detection."] },
+        { title: "System Results", items: ["Achieved high-traction pushing force and instantaneous white-line boundary interrupt execution during combat routines.", "Streamed non-blocking match telemetry, demonstrating core skills in embedded control and hardware-software integration."] }
+   ]
+},
 
     camera: {
       title: "Camera Module Interface",
