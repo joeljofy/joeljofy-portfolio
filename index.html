@@ -283,7 +283,7 @@
 
     <div class="fade-up flex flex-wrap gap-3 mb-10" id="filterBar">
       <button class="filter-btn active" data-filter="all">ALL</button>
-      <button class="filter-btn" data-filter="arduino">TTGO</button>
+      <button class="filter-btn" data-filter="ttgo">TTGO</button>
       <button class="filter-btn" data-filter="arduino">ARDUINO</button>
       <button class="filter-btn" data-filter="spikebot">SPIKEBOT</button>
       <button class="filter-btn" data-filter="ev3">EV3 MINDSTORM</button>
@@ -292,7 +292,7 @@
     <div id="projectGrid" class="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
 
       <!-- Project 6: TTGO Sumo-Bot -->
-      <div class="project-card card-hover rounded-lg border overflow-hidden flex flex-col" data-cat="arduino" style="background: var(--card); border-color: var(--border);">
+      <div class="project-card card-hover rounded-lg border overflow-hidden flex flex-col" data-cat="ttgo" style="background: var(--card); border-color: var(--border);">
         <div class="h-60 overflow-hidden relative bg-zinc-900">
           <img src="IMAGES/SUMO_BOT_1.jpeg" alt="TTGO Sumo Bot" class="w-full h-full object-contain">
           <div class="absolute bottom-3 left-3 px-2.5 py-1 rounded bg-black/80 backdrop-blur-md border border-zinc-800 font-mono text-[10px]" style="color: var(--cyan);">
@@ -560,7 +560,7 @@
       desc: "TTGO ESP32 sumo robot featuring high-torque control, multi-sensor tracking, and real-time desktop telemetry.",
       images: [
         { src: "IMAGES/SUMO_BOT_1.jpeg", label: "Prototype 1" },
-        { src: "IMAGES/SUMO_BOT_2.png", label: "Circuitry" }
+        { src: "IMAGES/SUMO_BOT_2.jpeg", label: "Circuitry" }
       ],
       sections: [
         { title: "Project Objective", items: ["Develop an autonomous mini-sumo robotic system leveraging pure drivetrain torque to forcefully eject opponent platforms from the Dohyo.", "Implement real-time multi-sensor feedback and stream motor telemetry over high-speed serial to a custom desktop UI."] },
